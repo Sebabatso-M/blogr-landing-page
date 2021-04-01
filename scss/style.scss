@@ -6,14 +6,27 @@
     padding: 0;
 }
 
-body{
+body {
     background: $white;
     line-height: 1.5;
 }
 
 // display flex
-.--flex{
+.--flex {
     display: flex;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 @import 'header';

@@ -1,38 +1,104 @@
-// header
-.container-1__header {
+.container-1 {
+
     background: linear-gradient($v-l-red, $l-red);
     color: $white;
-    padding: 2.8125rem 1.25rem;
-    padding-bottom: 0;
-}
 
-.header {
-
-    &__sub {
-        align-items: center;
-        justify-content: space-between;
+    &__header,
+    &__cta-section {
+        margin: 0 auto;
+        width: 90%;
     }
 
-    &__logo {
-        height: 33px;
+    &__header {
+        padding-top: 2.8125rem;
+        position: relative;
     }
 
-    // hamburger menu button
-    &__menu-btn {
-        height: 24px;
-        flex-direction: column;
-        justify-content: space-between;
+    .header {
 
-        &:hover {
-            cursor: pointer;
+        &__sub {
+            align-items: center;
+            justify-content: space-between;
         }
 
-        & span {
-            display: block;
-            border: 1px solid $white;
-            width: 31px;
+        &__logo {
+            height: 33px;
         }
 
-    }
+        // hamburger menu button
+        &__menu-btn {
+            height: 24px;
+            flex-direction: column;
+            justify-content: space-between;
 
+            &:hover {
+                cursor: pointer;
+            }
+
+            & span {
+                display: block;
+                border: 1px solid $white;
+                width: 31px;
+            }
+
+        }
+
+        .menu {
+            background: $white;
+            border-radius: 4px;
+            color: $v-d-desat-blue;
+            left: 50%;
+            padding: 1rem 0;
+            position: fixed;
+            text-align: center;
+            top: 5rem;
+            transform: translate(-50%, 32px);
+            width: 90%;
+
+
+            .navigation {
+
+                border-bottom: 1px solid $grayish-blue;
+
+                &__option {
+
+                    height: 37px;
+                    overflow-y: hidden;
+
+                    &:not(:first-child) {
+                        padding-top: 0.6rem;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 0.5rem;
+                }
+
+                &__option-title {
+                    display: inline-block;
+                    margin-right: 5px;
+                    margin-bottom: 0.8rem;
+                }
+
+                &__options {
+                    background: $grayish-blue;
+                    border-radius: 4px;
+                    color: $v-d-grayish-blue;
+                    margin: 0 auto;
+                    padding: 0.5rem 0;
+                    width: 87%;
+                    //display: none;
+                }
+
+                &__option-link {
+                    display: block;
+                    padding: 0.5rem 0;
+                }
+
+            }
+
+        }
+    }
 }
+
+// header
