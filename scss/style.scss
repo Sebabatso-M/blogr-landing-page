@@ -5,3 +5,15 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    background: $white;
+    line-height: 1.5;
+}
+
+// display flex
+.--flex{
+    display: flex;
+}
+
+@import 'header';

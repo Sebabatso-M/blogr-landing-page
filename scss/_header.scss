@@ -1,0 +1,38 @@
+// header
+.container-1__header {
+    background: linear-gradient($v-l-red, $l-red);
+    color: $white;
+    padding: 2.8125rem 1.25rem;
+    padding-bottom: 0;
+}
+
+.header {
+
+    &__sub {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        height: 33px;
+    }
+
+    // hamburger menu button
+    &__menu-btn {
+        height: 24px;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & span {
+            display: block;
+            border: 1px solid $white;
+            width: 31px;
+        }
+
+    }
+
+}
