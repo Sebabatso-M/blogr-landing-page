@@ -1,7 +1,7 @@
 %btn {
     border-radius: 25px;
     display: inline-block;
-    padding: 0.4rem;
+    padding: 0.6rem;
     text-align: center;
     transition: all 0.2s;
     width: 120px;
@@ -37,7 +37,7 @@
         color: $white;
 
         &:hover{
-            filter: brightness(120%);
+            filter: brightness(125%);
         }
     }
 }
