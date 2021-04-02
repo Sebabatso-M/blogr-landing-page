@@ -27,9 +27,10 @@
 
         // hamburger menu button
         &__menu-btn {
-            height: 24px;
+            height: 20px;
             flex-direction: column;
             justify-content: space-between;
+width: 26px;
 
             &:hover {
                 cursor: pointer;
@@ -48,7 +49,7 @@
             border-radius: 4px;
             color: $v-d-desat-blue;
             left: 50%;
-            padding: 1rem 0;
+            padding-bottom: 1rem 0;
             position: fixed;
             text-align: center;
             top: 5rem;
@@ -59,38 +60,49 @@
             .navigation {
 
                 border-bottom: 1px solid $grayish-blue;
+                margin-bottom: 2rem;
+                padding: 0.5rem 0 0.8rem 0;
 
                 &__option {
 
-                    height: 37px;
-                    overflow-y: hidden;
+                    height: max-content;
+                    //border: 1px solid red;
+                    //overflow-y: hidden;
+                    padding-top: 0.5rem;
+                    &:not(:last-child){
+                        margin-bottom: 0.8rem;
+                    }
 
-                    &:not(:first-child) {
-                        padding-top: 0.6rem;
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        overflow-y: hidden;
+                        height: 37px;
                     }
                 }
 
-                &:not(:last-child) {
-                    margin-bottom: 0.5rem;
-                }
-
-                &__option-title {
-                    display: inline-block;
-                    margin-right: 5px;
+                &__dropdown {
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
                     margin-bottom: 0.8rem;
                 }
 
-                &__options {
+                &__option-title {
+                    margin-right: 5px;
+                }
+
+                &__dropdown-options {
                     background: $grayish-blue;
                     border-radius: 4px;
                     color: $v-d-grayish-blue;
                     margin: 0 auto;
-                    padding: 0.5rem 0;
+                    padding-top: 0.5rem;
                     width: 87%;
                     //display: none;
                 }
 
-                &__option-link {
+                &__dropdown-option-link {
                     display: block;
                     padding: 0.5rem 0;
                 }
