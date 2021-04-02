@@ -1,0 +1,67 @@
+%btn {
+    border-radius: 25px;
+    display: inline-block;
+    padding: 0.4rem;
+    text-align: center;
+    transition: all 0.2s;
+    width: 120px;
+
+}
+
+.login-btn,
+.sign-up-btn,
+.start-btn,
+.learn-m-btn {
+    @extend %btn;
+}
+
+.menu {
+
+    .login-btn {
+        background: transparent;
+        display: block;
+        position: relative;
+        margin-bottom: 0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:hover {
+            background: $v-l-red;
+            filter: unset;
+            color: $white;
+        }
+    }
+
+    .sign-up-btn {
+        background: linear-gradient(to right, $v-l-red, $l-red);
+        color: $white;
+
+        &:hover{
+            filter: brightness(120%);
+        }
+    }
+}
+
+.cta-section {
+
+    .start-btn {
+        background: white;
+        color: $l-red;
+        margin-right: 12px;
+
+        &:hover {
+            background: $v-l-red;
+            color: $white;
+        }
+    }
+
+    .learn-m-btn{
+        border:1px solid $white;
+
+        &:hover{
+            background: $v-l-red;
+            border-color: $v-l-red;
+        }
+    }
+
+}

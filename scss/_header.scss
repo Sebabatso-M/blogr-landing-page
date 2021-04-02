@@ -30,7 +30,7 @@
             height: 20px;
             flex-direction: column;
             justify-content: space-between;
-width: 26px;
+            width: 26px;
 
             &:hover {
                 cursor: pointer;
@@ -49,36 +49,29 @@ width: 26px;
             border-radius: 4px;
             color: $v-d-desat-blue;
             left: 50%;
-            padding-bottom: 1rem 0;
+            padding-bottom: 1.3rem;
             position: fixed;
             text-align: center;
-            top: 5rem;
+            top: 4rem;
             transform: translate(-50%, 32px);
             width: 90%;
-
 
             .navigation {
 
                 border-bottom: 1px solid $grayish-blue;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
                 padding: 0.5rem 0 0.8rem 0;
 
                 &__option {
 
-                    height: max-content;
-                    //border: 1px solid red;
-                    //overflow-y: hidden;
+                    height: 37px;
+                    overflow-y: hidden;
                     padding-top: 0.5rem;
-                    &:not(:last-child){
+
+                    &:not(:last-child) {
                         margin-bottom: 0.8rem;
                     }
 
-                    &:nth-child(1),
-                    &:nth-child(2),
-                    &:nth-child(3) {
-                        overflow-y: hidden;
-                        height: 37px;
-                    }
                 }
 
                 &__dropdown {
