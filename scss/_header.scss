@@ -2,6 +2,16 @@
 
     background: linear-gradient($v-l-red, $l-red);
     color: $white;
+    position: relative;
+    text-align: center;
+
+    .overlay {
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.185));
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        top: calc(2.8125rem + 3.1875rem);
+    }
 
     &__header,
     &__cta-section {
@@ -36,7 +46,7 @@
                 cursor: pointer;
             }
 
-            & span {
+            >span {
                 display: block;
                 border: 1px solid $white;
                 width: 31px;
@@ -47,6 +57,8 @@
         .menu {
             background: $white;
             border-radius: 4px;
+            box-shadow: 4px 8px 14px 7px rgba(0, 0, 0, 0.212),
+                -4px 8px 14px 7px rgba(0, 0, 0, 0.212);
             color: $v-d-desat-blue;
             left: 50%;
             padding-bottom: 1.3rem;
@@ -77,6 +89,10 @@
                     display: flex;
                     justify-content: center;
                     margin-bottom: 0.8rem;
+
+                    &:hover{
+                        cursor:pointer;
+                    }
                 }
 
                 &__option-title {
@@ -99,7 +115,7 @@
 
             }
 
-            hr{
+            hr {
                 border: 1px solid $grayish-blue;
                 display: inline-block;
                 margin-bottom: 0.5rem;

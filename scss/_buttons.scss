@@ -24,10 +24,10 @@
         margin-bottom: 0.8rem;
         left: 50%;
         transform: translateX(-50%);
+        transition: background-color 5s;
 
         &:hover {
-            background: $v-l-red;
-            filter: unset;
+            background: linear-gradient(to right, $v-l-red, $l-red);
             color: $white;
         }
     }
@@ -36,7 +36,7 @@
         background: linear-gradient(to right, $v-l-red, $l-red);
         color: $white;
 
-        &:hover{
+        &:hover {
             filter: brightness(125%);
         }
     }
@@ -55,10 +55,10 @@
         }
     }
 
-    .learn-m-btn{
-        border:1px solid $white;
+    .learn-m-btn {
+        border: 1px solid $white;
 
-        &:hover{
+        &:hover {
             background: $v-l-red;
             border-color: $v-l-red;
         }
