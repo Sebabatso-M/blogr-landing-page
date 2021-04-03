@@ -1,4 +1,7 @@
 @import 'variables';
+@import 'buttons';
+@import 'header';
+@import 'animations';
 
 * {
     box-sizing: border-box;
@@ -16,6 +19,19 @@ body {
     display: flex;
 }
 
+.fade-out {
+    animation: fade-out 0.3s ease-in-out forwards;
+}
+
+.animated{
+    animation: slide-out 0.2s ease-in-out forwards,
+    fade-out 0.3s ease-in-out forwards;
+}
+
+.no-scroll{
+    overflow:hidden;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -29,5 +45,3 @@ a {
     }
 }
 
-@import 'buttons';
-@import 'header';
