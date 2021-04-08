@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $white;
+    line-height: 1.5;
+}
+
+// display flex
+.--flex {
+    display: flex;
+}
+
+.fade-out {
+    animation: fade-out 0.3s ease-in-out forwards;
+}
+
+.animated {
+    animation: slide-out 0.2s ease-in-out forwards,
+        fade-out 0.3s ease-in-out forwards;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:visited {
+        color: unset;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
