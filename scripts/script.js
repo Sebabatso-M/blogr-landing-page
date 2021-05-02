@@ -8,7 +8,7 @@ const nav_dropdowns = document.querySelectorAll('.navigation__dropdown');
 // open/close menu
 menu_btn.addEventListener('click', () => {
 
-    header.classList.toggle('open');
+    header.classList.toggle('--is-open');
     overlay.classList.add('fade-out');
     menu.classList.add('animated');
     body.classList.toggle('no-scroll');

@@ -1,0 +1,23 @@
+.menu {
+    background: $white;
+    border-radius: 4px;
+    box-shadow: 4px 8px 14px 7px rgba(0, 0, 0, 0.212),
+        -4px 8px 14px 7px rgba(0, 0, 0, 0.212);
+    color: $v-d-desat-blue;
+    left: 50%;
+    opacity: 0;
+    padding-bottom: 1.3rem;
+    position: fixed;
+    text-align: center;
+    top: 4rem;
+    transform: translate(-50%, 32px);
+    visibility: hidden;
+    width: 90%;
+
+    hr {
+        border: 1px solid $grayish-blue;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        width: 87%;
+    }
+}

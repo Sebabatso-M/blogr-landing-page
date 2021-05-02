@@ -1,5 +1,4 @@
-@import 'variables';
-@import 'global';
-@import 'buttons';
-@import 'header';
-@import 'animations';
+@import './0-utilities/utilities-dir';
+@import './1-base/base-dir';
+@import './2-components/components-dir';
+@import './3-layout/layout-dir';

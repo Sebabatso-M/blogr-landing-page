@@ -1,0 +1,10 @@
+.navigation__dropdown {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

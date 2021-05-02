@@ -1,0 +1,38 @@
+.container-1__header {
+    padding-top: 2.8125rem;
+    position: relative;
+}
+
+.header__sub {
+    @include --flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+/***********
+*    STATES
+***********/
+
+.--is-open {
+
+    .overlay {
+        animation: fade-in 0.3s ease-in-out forwards;
+    }
+
+    & span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    & span:nth-child(2) {
+        opacity: 0;
+    }
+
+    & span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .menu {
+        animation: fade-in 0.3s ease-in-out forwards, slide-in 0.3s ease-in-out forwards;
+    }
+}

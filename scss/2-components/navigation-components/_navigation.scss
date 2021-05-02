@@ -1,0 +1,12 @@
+.navigation {
+
+    // when dropdown is opened
+    .active {
+        color: $v-d-grayish-blue;
+    }
+
+    // for arrow when dropdown is opened
+    .opened {
+        transform: rotate(180deg)
+    }
+}
