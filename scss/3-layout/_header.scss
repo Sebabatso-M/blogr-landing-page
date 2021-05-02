@@ -3,13 +3,6 @@
     position: relative;
 }
 
-.header__sub {
-    @include --flex;
-
-    align-items: center;
-    justify-content: space-between;
-}
-
 /***********
 *    STATES
 ***********/
