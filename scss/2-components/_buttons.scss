@@ -17,53 +17,51 @@
     @extend %btn;
 }
 
-.menu {
+.login-btn {
+    background: transparent;
+    margin-bottom: to-rem(9.6);
+    transition: background-color 5s;
 
-    .login-btn {
-        background: transparent;
-        display: block;
-        position: relative;
-        margin-bottom: to-rem(9.6);
-        left: 50%;
-        transform: translateX(-50%);
-        transition: background-color 5s;
-
-        &:hover {
-            background: linear-gradient(to right, $v-l-red, $l-red);
-            color: $white;
-        }
-    }
-
-    .sign-up-btn {
+    &:hover {
         background: linear-gradient(to right, $v-l-red, $l-red);
         color: $white;
-
-        &:hover {
-            filter: brightness(125%);
-        }
     }
 }
 
-.cta-section {  
+.sign-up-btn {
+    background: linear-gradient(to right, $v-l-red, $l-red);
+    color: $white;
 
-    .start-btn {
-        background: white;
+    &:visited {
+        color: $white;
+    }
+
+    &:hover {
+        filter: brightness(125%);
+    }
+}
+
+
+.start-btn {
+    background: white;
+    color: $l-red;
+    margin-right: to-rem(12);
+
+    &:visited {
         color: $l-red;
-        margin-right: to-rem(12);
-
-        &:hover {
-            background: $v-l-red;
-            color: $white;
-        }
     }
 
-    .learn-m-btn {
-        border: 1px solid $white;
-
-        &:hover {
-            background: $v-l-red;
-            border-color: $v-l-red;
-        }
+    &:hover {
+        background: $v-l-red;
+        color: $white;
     }
+}
 
+.learn-m-btn {
+    border: 1px solid $white;
+
+    &:hover {
+        background: $v-l-red;
+        border-color: $v-l-red;
+    }
 }
