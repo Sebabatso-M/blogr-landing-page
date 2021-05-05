@@ -4,31 +4,26 @@
     padding: 0;
 }
 
-html{
+html {
     font-size: 16px;
 }
 
 body {
     background: $white;
+    font-family: $font-overpass;
     line-height: 1.5;
 }
 
-// display flex
-.--flex {
-    display: flex;
-}
-
-.fade-out {
-    animation: fade-out 0.3s ease-in-out forwards;
-}
-
-.animated {
-    animation: slide-out 0.2s ease-in-out forwards,
-    fade-out 0.3s ease-in-out forwards;
-}
-
+// applied to body when menu is open
 .no-scroll {
     overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-ubuntu;
 }
 
 a {
@@ -42,4 +37,8 @@ a {
     &:hover {
         cursor: pointer;
     }
+}
+
+.container-2 img {
+    width: 50%;
 }

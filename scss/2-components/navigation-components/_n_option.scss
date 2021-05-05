@@ -6,6 +6,6 @@
     transition: all 0.3s ease-in-out;
 
     &:not(:last-child) {
-        margin-bottom: 0.8rem;
+        margin-bottom: to-rem(12.8);
     }
 }

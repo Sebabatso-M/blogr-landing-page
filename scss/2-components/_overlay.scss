@@ -6,5 +6,10 @@
     position: fixed;
     visibility: hidden;
     width: 100%;
-    top: 2.8125rem + 3.1875rem;
+    top: to-rem(45.2) + to-rem(51);
+}
+
+// applied when menu is open
+.fade-out {
+    animation: fade-out 0.3s ease-in-out forwards;
 }

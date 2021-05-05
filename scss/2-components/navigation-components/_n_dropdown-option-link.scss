@@ -1,6 +1,7 @@
 .navigation__dropdown-option-link {
     display: block;
-    padding: 0.5rem 0;
+    font-weight: 600;
+    padding: to-rem(8) 0;
 
     &:hover {
         background: darken($grayish-blue, 5%);

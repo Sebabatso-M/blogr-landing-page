@@ -1,10 +1,12 @@
 %btn {
     border-radius: 25px;
     display: inline-block;
-    padding: 0.6rem;
+    font-family: $font-ubuntu;
+    font-weight: 700;
+    padding: to-rem(10) to-rem(12);
     text-align: center;
     transition: all 0.2s;
-    width: 120px;
+    min-width: 120px;
 
 }
 
@@ -21,7 +23,7 @@
         background: transparent;
         display: block;
         position: relative;
-        margin-bottom: 0.8rem;
+        margin-bottom: to-rem(9.6);
         left: 50%;
         transform: translateX(-50%);
         transition: background-color 5s;
@@ -42,12 +44,12 @@
     }
 }
 
-.cta-section {
+.cta-section {  
 
     .start-btn {
         background: white;
         color: $l-red;
-        margin-right: 12px;
+        margin-right: to-rem(12);
 
         &:hover {
             background: $v-l-red;

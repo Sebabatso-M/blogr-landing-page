@@ -1,0 +1,11 @@
+// convert to rem
+@function to-rem($value) {
+    $remValue: ($value / 16) * 1rem;
+    @return $remValue;
+}
+
+// convert to em
+@function to-em($value) {
+    $emValue: ($value / 16) * 1em;
+    @return $emValue;
+}

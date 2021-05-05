@@ -6,10 +6,10 @@
     color: $v-d-desat-blue;
     left: 50%;
     opacity: 0;
-    padding-bottom: 1.3rem;
+    padding-bottom: to-rem(20.8);
     position: fixed;
     text-align: center;
-    top: 4rem;
+    top: to-rem(16);
     transform: translate(-50%, 32px);
     visibility: hidden;
     width: 90%;
@@ -17,7 +17,15 @@
     hr {
         border: 1px solid $grayish-blue;
         display: inline-block;
-        margin-bottom: 0.5rem;
+        margin-bottom: to-rem(8);
         width: 87%;
     }
+
+    
 }
+
+// applied when menu is open
+    .animated {
+        animation: slide-out 0.2s ease-in-out forwards,
+            fade-out 0.3s ease-in-out forwards;
+    }
