@@ -1,7 +1,7 @@
 .navigation__dropdown-options {
-    background: $grayish-blue;
+    background: $l-grayish-blue;
     border-radius: 4px;
-    color: $v-d-grayish-blue;
+    color: lighten($v-d-grayish-blue,20%);
     margin: 0 auto;
     width: 87%;
 }

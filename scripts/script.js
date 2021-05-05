@@ -27,7 +27,7 @@ function collapse() {
     const title = this.children[0]
     const arrow = this.children[1].children[1];
     const max_height = parent.scrollHeight + 'px';
-    
+
     close_dropdowns(this);
 
     // if open
@@ -36,7 +36,7 @@ function collapse() {
     } else {
         increase_height(parent);
     }
-    title.classList.toggle('active')
+    title.classList.toggle('active');
     arrow.classList.toggle('opened');
 }
 
@@ -47,7 +47,7 @@ function increase_height(element) {
 
 // decrease height of dropdown 
 function decrease_height(element) {
-    element.style.maxHeight = '37px';
+    element.style.maxHeight = '36.8px';
 }
 
 // closes other open dropdowns
@@ -58,9 +58,12 @@ function close_dropdowns(ele = null) {
 
         if (ele !== element) {
             const parent = element.parentElement;
+            const title = element.children[0];
             const arrow = element.children[1].children[1];
 
             decrease_height(parent);
+
+            title.classList.remove('active');
             arrow.classList.remove('opened');
         }
     })

@@ -9,13 +9,13 @@
     padding-bottom: to-rem(20.8);
     position: fixed;
     text-align: center;
-    top: to-rem(16);
+    top: to-rem(16) + to-rem(45);
     transform: translate(-50%, 32px);
     visibility: hidden;
     width: 90%;
 
     hr {
-        border: 1px solid $grayish-blue;
+        border: 1px solid $l-grayish-blue;
         display: inline-block;
         margin-bottom: to-rem(8);
         width: 87%;

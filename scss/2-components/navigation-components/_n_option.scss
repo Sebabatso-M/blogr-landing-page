@@ -1,11 +1,7 @@
 .navigation__option {
-
     max-height: 37px;
     overflow-y: hidden;
+    margin-bottom: 0.8rem;
     padding-top: 0.5rem;
     transition: all 0.3s ease-in-out;
-
-    &:not(:last-child) {
-        margin-bottom: to-rem(12.8);
-    }
 }
