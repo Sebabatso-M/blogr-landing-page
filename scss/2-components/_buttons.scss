@@ -42,6 +42,10 @@
 }
 
 
+.start-btn, .learn-m-btn{
+    margin-bottom: to-rem(18);
+}
+
 .start-btn {
     background: white;
     color: $l-red;

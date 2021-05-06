@@ -1,10 +1,12 @@
 .container-1 {
 
-    background: linear-gradient(hsla(13, 100%, 72%, 0.952),rgba(255, 61, 84, 0.952)),
+    background: linear-gradient(hsla(13, 100%, 72%, 0.945),rgba(255, 61, 84, 0.925)),
         url('../../images/bg-pattern-intro.svg');
-    background-position: 38% 45%;
-    background-size: 360%;
+    background-position: 37% 35%;
+    background-size: 380%;
+    border-bottom-left-radius: to-rem(85);
     color: $white;
+    padding-bottom: to-rem(120);
     text-align: center;
 
 
