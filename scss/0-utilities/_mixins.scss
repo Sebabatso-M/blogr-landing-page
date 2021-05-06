@@ -1,3 +1,9 @@
+//  set display flex
 @mixin --flex {
     display: flex;
+}
+
+// set margin-bottom
+@mixin set-mb($value){
+    margin-bottom: to-rem($value);
 }

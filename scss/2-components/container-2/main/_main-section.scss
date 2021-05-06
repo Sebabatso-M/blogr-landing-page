@@ -1,0 +1,11 @@
+.main__section {
+    @include set-mb($m-b-xl);
+}
+
+.section-card:not(:last-child){
+    @include set-mb($m-b-s)
+}
+
+.section-card__heading {
+    @include set-mb($m-b-m);
+}

@@ -1,11 +1,16 @@
+.container{
+    text-align: center;
+}
+
 .container-1 {
 
-    background: linear-gradient(hsla(13, 100%, 72%, 0.945),rgba(255, 61, 84, 0.925)),
+    background: linear-gradient(hsla(13, 100%, 72%, 0.945), rgba(255, 61, 84, 0.925)),
         url('../../images/bg-pattern-intro.svg');
     background-position: 37% 35%;
     background-size: 380%;
     border-bottom-left-radius: to-rem(85);
     color: $white;
+    margin-bottom: to-rem(88);
     padding-bottom: to-rem(120);
     text-align: center;
 
