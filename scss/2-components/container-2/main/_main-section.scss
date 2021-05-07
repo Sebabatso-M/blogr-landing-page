@@ -6,18 +6,22 @@
         display: block;
     }
 
-    // added specific styling to this image because
-    // it looks smaller than the other images even
-    // tho they are all set to the same size
-    // (did this to make it look more like in the design)
+    /**
+    * added specific styling to this image because
+    * it looks smaller than the other images even
+    * tho they are all set to the same size
+    * (did this to make it look more like in the design)
+    */
     .laptop-img {
         width: 140%;
     }
 }
 
-// 1) added position relative so that I can center the 
-//    image, because when setting the width above 100%,
-//    image does not look like its in the center of parent
+/**
+* 1) added position relative so that I can center the 
+*    image, because when setting the width above 100%,
+*    image does not look like its in the center of parent
+*/
 .main img {
     @include set-mb($m-b-l);
 
@@ -49,10 +53,12 @@
 }
 
 .section-1 {
-    // -added more to make up for the phones image being
-    //  moved up
-    // -this caused the image to overlap the text in the
-    //  section-1 div, hence more margin
+    /**
+    * -added more to make up for the phones image being
+    *  moved up
+    * -this caused the image to overlap the text in the
+    *  section-1 div, hence more margin
+    */
     @include set-mb($m-b-xl + 151);
 }
 
@@ -65,7 +71,6 @@
 *    wrapper, because when setting the width above 100%,
 *    it moves from the center
 */
-
 .section-2-wrapper {
     @include set-mb($m-b-xl);
 
