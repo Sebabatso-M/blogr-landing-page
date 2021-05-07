@@ -8,7 +8,7 @@
         url('../../images/bg-pattern-intro.svg');
     background-position: 37% 35%;
     background-size: 380%;
-    border-bottom-left-radius: to-rem(85);
+    border-bottom-left-radius: to-rem($curve-val);
     color: $white;
     margin-bottom: to-rem(88);
     padding-bottom: to-rem(120);

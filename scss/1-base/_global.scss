@@ -12,6 +12,7 @@ body {
     background: $white;
     font-family: $font-overpass;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 // applied to body when menu is open

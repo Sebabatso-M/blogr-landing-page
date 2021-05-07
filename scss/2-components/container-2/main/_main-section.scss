@@ -1,11 +1,132 @@
 .main__section {
     @include set-mb($m-b-xl);
+
+    // span elements within section-card__headings
+    span {
+        display: block;
+    }
+
+    // added specific styling to this image because
+    // it looks smaller than the other images even
+    // tho they are all set to the same size
+    // (did this to make it look more like in the design)
+    .laptop-img {
+        width: 140%;
+    }
 }
 
-.section-card:not(:last-child){
-    @include set-mb($m-b-s)
+// 1) added position relative so that I can center the 
+//    image, because when setting the width above 100%,
+//    image does not look like its in the center of parent
+.main img {
+    @include set-mb($m-b-l);
+
+    width: 105%;
+    position: relative; // 1
+    left: 50%; // 1
+    transform: translateX(-50%); // 1
 }
 
-.section-card__heading {
-    @include set-mb($m-b-m);
+.section-card {
+    // add margin to all cards but not the last card
+    &:not(:last-child) {
+        @include set-mb($m-b-l);
+    }
+
+    &__heading {
+        @include set-mb($m-b-m);
+
+        font-size: to-rem(23);
+        font-weight: 700;
+        color: $v-d-blue;
+    }
+}
+
+.paragraph {
+    color: $v-d-gray-blue;
+    max-width: 35ch;
+    margin: 0 auto;
+}
+
+.section-1 {
+    // -added more to make up for the phones image being
+    //  moved up
+    // -this caused the image to overlap the text in the
+    //  section-1 div, hence more margin
+    @include set-mb($m-b-xl + 151);
+}
+
+/**
+* 1) did this so that the section ignores the padding applied
+*    to the main container, so that it covers the whole width
+*    of the body, in order to style the section-2 with a
+*    background color without it looking funny ;)
+* 2) added position relative so that I can center the 
+*    wrapper, because when setting the width above 100%,
+*    it moves from the center
+*/
+
+.section-2-wrapper {
+    @include set-mb($m-b-xl);
+
+    position: relative; //2
+    width: 125%; // 1
+    left: 50%; //2
+    transform: translateX(-50%); //2
+
+    img {
+        position: absolute;
+    }
+
+    /**
+    * subtracting a percentage to the width because:
+    *  -the parent width is set to more than 100%
+    *  -because of the parent width, the 105% set on all
+    *   images, on this image becomes 105% of the parent width
+    *   making it bigger than the other images
+    */
+    .phones-img {
+        top: to-rem(-165);
+        width: 125% - 30%;
+        z-index: 100;
+    }
+}
+
+/*
+* 1) added more curve to the border radius because the
+*    this section's width is more than 100% of the body,
+*    which caused the border-radius curve to look smaller
+*    than intended 
+*/
+.section-2 {
+    $more-curve: 30; // 1
+
+    background: linear-gradient(
+        lighten($v-d-gray-blue, 0%),
+        lighten($v-d-desat-blue, 0%)
+    );
+    border-top-right-radius: to-rem($curve-val + $more-curve);
+    border-bottom-left-radius: to-rem($curve-val + $more-curve);
+    overflow: hidden;  // because section is more than 100% of body
+    padding-top: 54%;
+    padding-bottom: to-rem(102);
+    margin: 0 auto;
+    position: relative;
+    width: 98%;
+    z-index: -2; // so the the background-img (circles) can be above this section
+
+    .background-img {
+        top: to-rem(-180);
+        width: 150%;
+        z-index: -1;
+    }
+
+    .section-card {
+        &__heading {
+            color: $white;
+        }
+        .paragraph{
+            color: $grayish-blue;
+        }
+    }
 }

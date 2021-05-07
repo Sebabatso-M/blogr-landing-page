@@ -6,10 +6,11 @@
     position: fixed;
     visibility: hidden;
     width: 100%;
-    top: to-rem(45.2) + to-rem(51);
+    top: to-rem(45.2) + to-rem(51); // adding 51px to the 45.2px set on the header padding-top
 }
 
 // applied when menu is open
+// (see _header.scss for fade-in animation styling)
 .fade-out {
     animation: fade-out 0.3s ease-in-out forwards;
 }

@@ -1,16 +1,18 @@
+// 1) centering the menu
+// 2) adding 16px to the 45px of the header padding-top
 .menu {
     background: $white;
     border-radius: 4px;
     box-shadow: 4px 8px 14px 7px rgba(0, 0, 0, 0.212),
         -4px 8px 14px 7px rgba(0, 0, 0, 0.212);
     color: $v-d-desat-blue;
-    left: 50%;
+    left: 50%; // 1
     opacity: 0;
     padding-bottom: to-rem(20.8);
     position: fixed;
     text-align: center;
-    top: to-rem(16) + to-rem(45);
-    transform: translate(-50%, 32px);
+    top: to-rem(16) + to-rem(45); // 2
+    transform: translate(-50%, 32px); // 1
     visibility: hidden;
     width: 90%;
 
@@ -25,6 +27,7 @@
 }
 
 // applied when menu is open
+// (see _header.scss for slide-in animation styling)
     .animated {
         animation: slide-out 0.2s ease-in-out forwards,
             fade-out 0.3s ease-in-out forwards;
