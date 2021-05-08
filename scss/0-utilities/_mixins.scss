@@ -4,6 +4,13 @@
 }
 
 // set margin-bottom
-@mixin set-mb($value){
+@mixin set-mb($value) {
     margin-bottom: to-rem($value);
+}
+
+// for media-queries
+@mixin breakpoint($size) {
+    @media (min-width: to-em(map-get($breakpoints, $size))) {
+        @content;
+    }
 }
