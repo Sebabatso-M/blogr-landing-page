@@ -1,0 +1,7 @@
+.logo {
+    height: to-rem(33);
+}
+
+.footer .logo{
+    @include set-mb($m-b-l);
+}

@@ -1,0 +1,10 @@
+.footer-nav__option-link{
+    display:block;
+    font-size: to-rem(14.5);
+    font-weight: 600;
+    padding: to-rem(8) 0;
+
+    &:hover{
+        color:lighten($grayish-blue, 15%);
+    }
+}

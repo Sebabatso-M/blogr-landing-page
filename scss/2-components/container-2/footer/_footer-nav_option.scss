@@ -1,0 +1,7 @@
+.footer-nav__option:not(:last-child) {
+    @include set-mb(45);
+}
+
+.footer-nav__option{
+    color:$white;
+}
