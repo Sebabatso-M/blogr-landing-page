@@ -4,8 +4,13 @@
     padding: 0;
 }
 
+/**
+*   1) added this to remove the extra white space that appear
+*      on the left side of the html document
+*/
 html {
     font-size: 16px;
+    overflow-x: hidden; // 1
 }
 
 body {
