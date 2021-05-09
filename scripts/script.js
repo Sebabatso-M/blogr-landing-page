@@ -1,7 +1,7 @@
 const menu_btn = document.querySelector('.header__menu-btn');
 const overlay = document.querySelector('.overlay');
 const menu = document.querySelector('.menu');
-const body = document.querySelector('body');
+const html = document.querySelector("html");
 const header = document.querySelector('.header');
 const nav_dropdowns = document.querySelectorAll('.navigation__dropdown');
 
@@ -11,7 +11,7 @@ menu_btn.addEventListener('click', () => {
     header.classList.toggle('--is-open');
     overlay.classList.add('fade-out');
     menu.classList.add('animated');
-    body.classList.toggle('no-scroll');
+    html.classList.toggle('no-scroll');
     close_dropdowns();
 
 }, false);

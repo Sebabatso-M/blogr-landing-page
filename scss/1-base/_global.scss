@@ -20,7 +20,7 @@ body {
     overflow-x: hidden;
 }
 
-// applied to body when menu is open
+// applied to html when menu is open
 .no-scroll {
     overflow: hidden;
 }
@@ -34,6 +34,13 @@ h4 {
 
 h1{
     font-size: to-rem(28);
+
+    @include breakpoint(mobile-s){
+        font-size: to-rem(30);
+    }
+    @include breakpoint(mobile-m){
+        font-size: to-rem(32);
+    }
 }
 
 a {

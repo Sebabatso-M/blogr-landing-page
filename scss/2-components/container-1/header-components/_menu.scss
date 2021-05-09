@@ -16,6 +16,10 @@
     visibility: hidden;
     width: 90%;
 
+    @include breakpoint(mobile-m){
+        width: 84%;
+    }
+
     hr {
         border: 1px solid $l-grayish-blue;
         display: inline-block;

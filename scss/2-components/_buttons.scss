@@ -46,10 +46,19 @@
     margin-bottom: to-rem(18);
 }
 
+/**
+*   1) before 284px, the buttons are stacked
+*      added media query so that at 284px, when
+*      there is enough space,when the buttons become 
+*      placed side to side, add some space between
+*/
 .start-btn {
     background: white;
     color: $l-red;
-    margin-right: to-rem(12);
+
+    @media (min-width:to-em(285)){ // 1
+        margin-right: to-rem(12);
+    }
 
     &:visited {
         color: $l-red;

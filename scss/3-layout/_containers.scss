@@ -1,11 +1,13 @@
-.container{
+.container {
     text-align: center;
 }
 
 .container-1 {
-
-    background: linear-gradient(hsla(13, 100%, 72%, 0.945), rgba(255, 61, 84, 0.925)),
-        url('../../images/bg-pattern-intro.svg');
+    background: linear-gradient(
+            hsla(13, 100%, 72%, 0.945),
+            rgba(255, 61, 84, 0.925)
+        ),
+        url("../../images/bg-pattern-intro.svg");
     background-position: 37% 35%;
     background-size: 380%;
     border-bottom-left-radius: to-rem($curve-val);
@@ -14,10 +16,22 @@
     padding-bottom: to-rem(120);
     text-align: center;
 
+    @include breakpoint(mobile-m) {
+        background-position-y: 40%;
+    }
+
+    @include breakpoint(mobile-l){
+        border-bottom-left-radius: to-rem(150);
+    }
 
     &__header,
     &__cta-section {
         margin: 0 auto;
         width: 90%;
+
+        @include breakpoint(mobile-m){
+            width: 84%;
+        }
     }
+
 }

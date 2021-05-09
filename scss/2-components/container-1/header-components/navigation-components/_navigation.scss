@@ -1,6 +1,14 @@
 .navigation {
     padding-top: to-rem(8);
 
+    @include breakpoint(mobile-s){
+        padding-top: to-rem(12);
+    }
+
+    @include breakpoint(mobile-m){
+        padding-top: to-rem(16);
+    }
+
     // when dropdown is opened
     // applied to navigation dropdown title
     .active {

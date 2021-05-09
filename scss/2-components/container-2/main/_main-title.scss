@@ -1,4 +1,12 @@
 .main__title {
     @include set-mb($m-b-m);
     color: $v-d-blue;
+
+    @include breakpoint(mobile-s){
+        font-size: to-rem(26);
+    }
+
+    @include breakpoint(mobile-m){
+        font-size: to-rem(28);
+    }
 }

@@ -9,11 +9,19 @@
     /**
     * added specific styling to this image because
     * it looks smaller than the other images even
-    * tho they are all set to the same size
+    * though they are all set to the same size
     * (did this to make it look more like in the design)
     */
     .laptop-img {
         width: 140%;
+
+        @include breakpoint(mobile-m) {
+            width: 135%;
+        }
+
+        @include breakpoint(mobile-l) {
+            max-width: to-rem(620);
+        }
     }
 }
 
@@ -29,6 +37,14 @@
     position: relative; // 1
     left: 50%; // 1
     transform: translateX(-50%); // 1
+
+    @include breakpoint(mobile-m) {
+        width: 100%;
+    }
+
+    @include breakpoint(mobile-l) {
+        max-width: to-rem(477);
+    }
 }
 
 .section-card {
@@ -43,6 +59,14 @@
         font-size: to-rem(23);
         font-weight: 700;
         color: $v-d-blue;
+
+        @include breakpoint(mobile-s) {
+            font-size: to-rem(25);
+        }
+
+        @include breakpoint(mobile-m) {
+            font-size: to-rem(27);
+        }
     }
 }
 
@@ -79,6 +103,18 @@
     left: 50%; //2
     transform: translateX(-50%); //2
 
+    @include breakpoint(mobile-s) {
+        width: 118%;
+    }
+
+    @include breakpoint(mobile-m) {
+        width: 115%;
+    }
+
+    @include breakpoint(mobile-l) {
+        width: 114%;
+    }
+
     img {
         position: absolute;
     }
@@ -94,6 +130,15 @@
         top: to-rem(-165);
         width: 125% - 30%;
         z-index: 100;
+
+        @include breakpoint(mobile-m) {
+            width: 125% - 35%;
+        }
+
+        @include breakpoint(mobile-l) {
+            top: to-rem(-180);
+            max-width: to-rem(491);
+        }
     }
 }
 
@@ -125,10 +170,24 @@
     width: 98%;
     z-index: -2; // so the the background-img (circles) can be above this section
 
+    @include breakpoint(mobile-l) {
+        border-top-right-radius: to-rem(145);
+        border-bottom-left-radius: to-rem(145);
+    }
+
     .background-img {
         top: to-rem(-180);
         width: 150%;
         z-index: -1;
+
+        @include breakpoint(mobile-m) {
+            width: 145%;
+        }
+
+        @include breakpoint(mobile-l) {
+            max-width: to-rem(733);
+            top: to-rem(-195);
+        }
     }
 
     .section-card {
