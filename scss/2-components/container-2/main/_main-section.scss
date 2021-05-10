@@ -43,7 +43,7 @@
     }
 
     @include breakpoint(mobile-l) {
-        max-width: to-rem(477);
+        max-width: to-rem(477)
     }
 }
 
@@ -78,12 +78,23 @@
 
 .section-1 {
     /**
+    *  1)
     * -added more to make up for the phones image being
     *  moved up
     * -this caused the image to overlap the text in the
     *  section-1 div, hence more margin
+    *
+    *  2) a fix to the bug that causes the image to move
+    *     away from the center of the page
+    *     -this fix keeps image in the center
     */
-    @include set-mb($m-b-xl + 151);
+    @include set-mb($m-b-xl + 151); // 1
+
+    img{
+        @media (min-width:to-em(520)){
+            margin-right: 10% * 3;
+        }
+    }
 }
 
 /**
