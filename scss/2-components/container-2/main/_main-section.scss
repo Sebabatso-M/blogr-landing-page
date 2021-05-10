@@ -29,6 +29,9 @@
 * 1) added position relative so that I can center the 
 *    image, because when setting the width above 100%,
 *    image does not look like its in the center of parent
+*  2) a fix to the bug that causes the image to move
+*     away from the center of the page
+*     -this fix keeps image in the center
 */
 .main img {
     @include set-mb($m-b-m);
@@ -43,7 +46,11 @@
     }
 
     @include breakpoint(mobile-l) {
-        max-width: to-rem(477)
+        max-width: to-rem(477);
+    }
+
+    @media (min-width: to-em(520)) {
+        margin-right: 10% * 3.5;    // 2
     }
 }
 
@@ -83,16 +90,12 @@
     *  moved up
     * -this caused the image to overlap the text in the
     *  section-1 div, hence more margin
-    *
-    *  2) a fix to the bug that causes the image to move
-    *     away from the center of the page
-    *     -this fix keeps image in the center
     */
     @include set-mb($m-b-xl + 151); // 1
 
-    img{
-        @media (min-width:to-em(520)){
-            margin-right: 10% * 3;
+    img {
+        @media (min-width: to-em(520)) {
+            margin-right: 10% * 3.5;
         }
     }
 }

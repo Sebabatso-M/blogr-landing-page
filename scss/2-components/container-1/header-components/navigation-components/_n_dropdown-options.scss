@@ -4,4 +4,16 @@
     color: lighten($v-d-grayish-blue,20%);
     margin: 0 auto;
     width: 87%;
+
+    @include breakpoint(tablet){
+        color: $v-d-blue;
+        opacity: 0;
+        padding: to-rem(19) 0;
+        position: absolute;
+        text-align: left;
+        top: to-rem(50);
+        left: to-rem(-15);
+        width: to-rem(168);
+        visibility:hidden;
+    }
 }

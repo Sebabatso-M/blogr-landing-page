@@ -7,6 +7,10 @@
     visibility: hidden;
     width: 100%;
     top: to-rem(45.2) + to-rem(51); // adding 51px to the 45.2px set on the header padding-top
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
 }
 
 // applied when menu is open

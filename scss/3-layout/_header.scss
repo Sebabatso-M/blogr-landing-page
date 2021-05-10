@@ -2,6 +2,12 @@
     padding-top: to-rem(45);
     position: relative;
     margin-bottom: to-rem(90);
+
+    @include breakpoint(tablet) {
+        @include --flex;
+
+        border: 1px solid red;
+    }
 }
 
 /***********
@@ -9,7 +15,6 @@
 ***********/
 
 .--is-open {
-
     .overlay {
         animation: fade-in 0.3s ease-in-out forwards;
     }
@@ -27,6 +32,7 @@
     }
 
     .menu {
-        animation: fade-in 0.3s ease-in-out forwards, slide-in 0.3s ease-in-out forwards;
+        animation: fade-in 0.3s ease-in-out forwards,
+            slide-in 0.3s ease-in-out forwards;
     }
 }

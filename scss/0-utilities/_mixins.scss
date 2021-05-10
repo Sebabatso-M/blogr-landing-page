@@ -3,6 +3,10 @@
     display: flex;
 }
 
+// set display grid
+@mixin --grid{
+    display: grid;
+}
 // set margin-bottom
 @mixin set-mb($value) {
     margin-bottom: to-rem($value);

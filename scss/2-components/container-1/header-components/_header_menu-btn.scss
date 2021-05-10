@@ -21,4 +21,7 @@
         width: 31px;
     }
 
+    @include breakpoint(tablet){
+        display: none;
+    }
 }

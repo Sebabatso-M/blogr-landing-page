@@ -16,23 +16,40 @@
     visibility: hidden;
     width: 90%;
 
-    @include breakpoint(mobile-m){
+    @include breakpoint(mobile-m) {
         width: 84%;
     }
 
+    @include breakpoint(tablet) {
+        @include --flex;
+
+        background: transparent;
+        box-shadow: unset;
+        color: $white;
+        opacity: 1;
+        padding: 0;
+        position: static;
+        transform: unset;
+        visibility: visible;
+        width: 85%;
+    }
+    
     hr {
         border: 1px solid $l-grayish-blue;
         display: inline-block;
         margin-bottom: to-rem(8);
         width: 87%;
+
+        @include breakpoint(tablet){
+            display: none;
+        }
     }
 
-    
 }
 
 // applied when menu is open
 // (see _header.scss for slide-in animation styling)
-    .animated {
-        animation: slide-out 0.2s ease-in-out forwards,
-            fade-out 0.3s ease-in-out forwards;
-    }
+.animated {
+    animation: slide-out 0.2s ease-in-out forwards,
+        fade-out 0.3s ease-in-out forwards;
+}

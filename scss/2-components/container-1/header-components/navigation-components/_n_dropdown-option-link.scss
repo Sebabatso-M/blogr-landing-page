@@ -7,4 +7,15 @@
     &:hover {
         background: darken($l-grayish-blue, 5%);
     }
+
+    @include breakpoint(tablet){
+        padding: to-rem(4);
+        padding-left: to-rem(30);
+        font-weight: 300;
+
+        &:hover{
+            background:unset;
+            font-weight: 600;
+        }
+    }
 }

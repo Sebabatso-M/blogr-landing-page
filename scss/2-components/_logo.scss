@@ -1,5 +1,9 @@
 .logo {
     height: to-rem(33);
+
+    @include breakpoint(tablet){
+        margin-right: to-rem(30);
+    }
 }
 
 .footer .logo{

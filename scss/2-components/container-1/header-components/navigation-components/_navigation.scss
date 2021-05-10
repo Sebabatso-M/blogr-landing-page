@@ -1,22 +1,46 @@
 .navigation {
     padding-top: to-rem(8);
 
-    @include breakpoint(mobile-s){
+    @include breakpoint(mobile-s) {
         padding-top: to-rem(12);
     }
 
-    @include breakpoint(mobile-m){
+    @include breakpoint(mobile-m) {
         padding-top: to-rem(16);
     }
 
+    @include breakpoint(tablet) {
+        @include --flex;
+
+        padding: 0;
+        width: 85%;
+    }
     // when dropdown is opened
     // applied to navigation dropdown title
     .active {
         color: lighten($v-d-grayish-blue, 10%);
+
+        @include breakpoint(tablet) {
+            color: $white;
+
+            &::after {
+                // underline to show that its active
+                content: "";
+                border: to-rem(1.5) solid $white;
+                bottom: to-rem(6);
+                position: absolute;
+                left: 0;
+                width: 80%;
+            }
+
+            .navigation__dropdown-options {
+                animation: fade-in 0.3s ease-in-out forwards
+            }
+        }
     }
 
     // for arrow when dropdown is opened
     .opened {
-        transform: rotate(180deg)
+        transform: rotate(180deg);
     }
 }

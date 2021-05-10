@@ -1,8 +1,15 @@
 .navigation__option {
     @include set-mb(12.8);
 
-    max-height: 37px;
+    max-height: 36.8px;
     overflow-y: hidden; // hides the dropdown element
     padding-top: to-rem(8);
     transition: all 0.3s ease-in-out;
+
+    @include breakpoint(tablet){
+        margin:0 0 0 to-rem(22);
+        position: relative;
+        overflow:visible;
+   
+    }
 }
