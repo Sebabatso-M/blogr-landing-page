@@ -1,11 +1,14 @@
 .navigation__dropdown-options {
     background: $l-grayish-blue;
     border-radius: 4px;
-    color: lighten($v-d-grayish-blue,20%);
+    color: lighten($v-d-grayish-blue, 20%);
     margin: 0 auto;
     width: 87%;
 
-    @include breakpoint(tablet){
+    @include breakpoint(tablet) {
+        box-shadow: 4px 8px 14px 5px rgba(0, 0, 0, 0.151),
+            -4px 8px 14px 5px rgba(0, 0, 0, 0.151);
+        color: $v-d-desat-blue;
         color: $v-d-blue;
         opacity: 0;
         padding: to-rem(19) 0;
@@ -14,6 +17,39 @@
         top: to-rem(50);
         left: to-rem(-15);
         width: to-rem(168);
-        visibility:hidden;
+        visibility: hidden;
+    }
+}
+
+.open {
+    @include breakpoint(tablet) {
+        animation: fade-in 0.3s ease-in-out forwards,
+            slide-down 0.3s ease-in-out forwards;
+    }
+}
+
+.animate {
+    @include breakpoint(tablet) {
+        animation: slide-up 0.2s ease-in-out forwards,
+            fade-out 0.3s ease-in-out forwards;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(to-rem(-20));
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(to-rem(-20));
     }
 }

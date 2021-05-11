@@ -28,6 +28,7 @@ function collapse() {
     const title = this.children[0];
     const arrow = this.children[1].children[1];
     const max_height = parent.scrollHeight + "px";
+    const options = this.nextElementSibling;
 
     close_dropdowns(this);
 
@@ -37,6 +38,15 @@ function collapse() {
             decrease_height(parent);
         } else {
             increase_height(parent);
+        }
+    } else {
+        // on tablet view and above
+
+        options.classList.toggle("open");
+        if (!options.classList.contains("open")) {
+            options.classList.add("animate");
+        } else {
+            options.classList.remove("animate");
         }
     }
     title.classList.toggle("active");
@@ -61,8 +71,15 @@ function close_dropdowns(ele = null) {
             const parent = element.parentElement;
             const title = element.children[0];
             const arrow = element.children[1].children[1];
+            const options = element.nextElementSibling;
 
             decrease_height(parent);
+
+            // for tablet view and up
+            if (options.classList.contains("open")) {
+                options.classList.add("animate");
+                options.classList.remove("open");
+            } 
 
             title.classList.remove("active");
             arrow.classList.remove("opened");

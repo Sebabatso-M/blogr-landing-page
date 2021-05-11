@@ -21,6 +21,7 @@
     }
 
     @include breakpoint(mobile-l) {
+        background-position-y: 46%;
         border-bottom-left-radius: to-rem(150);
     }
 
@@ -36,5 +37,11 @@
         @include breakpoint(tablet) {
             width: 94%;
         }
+    }
+
+    @include breakpoint(tablet) {
+        background-position-x: 32%;
+        background-position-y: 50%;
+        background-size: 245%;
     }
 }
