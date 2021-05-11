@@ -32,17 +32,6 @@ h4 {
     font-family: $font-ubuntu;
 }
 
-h1{
-    font-size: to-rem(28);
-
-    @include breakpoint(mobile-s){
-        font-size: to-rem(30);
-    }
-    @include breakpoint(mobile-m){
-        font-size: to-rem(32);
-    }
-}
-
 a {
     color: inherit;
     text-decoration: none;

@@ -1,7 +1,23 @@
 .cta-section__title {
+    font-size: to-rem(28);
     margin-bottom: to-rem(25);
-    
-    >span {
+
+    > span {
         display: block;
+
+        @include breakpoint(tablet) {
+            display: inline-block;
+        }
+    }
+
+    @include breakpoint(mobile-s) {
+        font-size: to-rem(30);
+    }
+    @include breakpoint(mobile-m) {
+        font-size: to-rem(32);
+    }
+
+    @include breakpoint(tablet) {
+        font-size: to-rem(34);
     }
 }

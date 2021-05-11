@@ -7,7 +7,6 @@
     text-align: center;
     transition: all 0.2s;
     min-width: 120px;
-
 }
 
 .login-btn,
@@ -20,11 +19,16 @@
 .login-btn {
     background: transparent;
     margin-bottom: to-rem(9.6);
-    transition: background-color 5s;
+    transition: background-color 0.5s;
 
     &:hover {
-        background: linear-gradient(to right, $v-l-red, $l-red);
-        color: $white;
+        background: white;
+        color: $v-l-red;
+    }
+
+    @include breakpoint(tablet) {
+        margin: 0;
+        margin-right: to-rem(5);
     }
 }
 
@@ -39,10 +43,24 @@
     &:hover {
         filter: brightness(125%);
     }
+
+    @include breakpoint(tablet) {
+        background: $white;
+        color: $v-l-red;
+
+        &:visited {
+            color: $v-l-red;
+        }
+
+        &:hover {
+            background: $v-l-red;
+            color: $white;
+        }
+    }
 }
 
-
-.start-btn, .learn-m-btn{
+.start-btn,
+.learn-m-btn {
     margin-bottom: to-rem(18);
 }
 
@@ -56,7 +74,8 @@
     background: white;
     color: $l-red;
 
-    @media (min-width:to-em(285)){ // 1
+    @media (min-width: to-em(285)) {
+        // 1
         margin-right: to-rem(12);
     }
 
@@ -74,7 +93,7 @@
     border: 1px solid $white;
 
     &:hover {
-        background: $v-l-red;
-        border-color: $v-l-red;
+        background: white;
+        color: $l-red;
     }
 }

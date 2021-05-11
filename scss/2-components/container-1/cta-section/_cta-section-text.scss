@@ -1,5 +1,9 @@
-.cta-section__text{
-    margin:0 auto;
+.cta-section__text {
+    margin: 0 auto;
     margin-bottom: to-rem(42);
     max-width: 32ch;
+
+    @include breakpoint(laptop-s) {
+        max-width: unset;
+    }
 }

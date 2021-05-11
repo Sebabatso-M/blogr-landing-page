@@ -5,8 +5,6 @@
 
     @include breakpoint(tablet) {
         @include --flex;
-
-        border: 1px solid red;
     }
 }
 

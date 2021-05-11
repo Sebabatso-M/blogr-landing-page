@@ -6,10 +6,10 @@
     padding-top: to-rem(8);
     transition: all 0.3s ease-in-out;
 
-    @include breakpoint(tablet){
-        margin:0 0 0 to-rem(22);
+    @include breakpoint(tablet) {
+        margin:0;
+        margin-right: to-rem(22);
         position: relative;
-        overflow:visible;
-   
+        overflow: visible;
     }
 }

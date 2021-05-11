@@ -19,8 +19,12 @@ menu_btn.addEventListener(
 );
 
 nav_dropdowns.forEach((element) => {
-    element.addEventListener("click", collapse, false);
+    element.addEventListener("click", collapse);
 });
+
+// document.querySelectorAll('.navigation__dropdown-options').forEach((element) => {
+//     element.addEventListener("blur", close_dropdowns);
+// });
 
 // open dropdown
 function collapse() {
@@ -79,7 +83,7 @@ function close_dropdowns(ele = null) {
             if (options.classList.contains("open")) {
                 options.classList.add("animate");
                 options.classList.remove("open");
-            } 
+            }
 
             title.classList.remove("active");
             arrow.classList.remove("opened");
