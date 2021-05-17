@@ -9,4 +9,8 @@
     @include breakpoint(mobile-m){
         font-size: to-rem(28);
     }
+
+    @include breakpoint(tablet){
+        @include set-mb(72);
+    }
 }

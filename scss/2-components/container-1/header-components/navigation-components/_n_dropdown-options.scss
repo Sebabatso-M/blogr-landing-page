@@ -25,6 +25,8 @@
     @include breakpoint(tablet) {
         animation: fade-in 0.3s ease-in-out forwards,
             slide-down 0.3s ease-in-out forwards;
+
+        background: $white;
     }
 }
 

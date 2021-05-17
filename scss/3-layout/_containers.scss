@@ -25,6 +25,11 @@
         border-bottom-left-radius: to-rem(150);
     }
 
+    @include breakpoint(tablet) {
+        margin-bottom: to-rem(58);
+        border-bottom-left-radius: to-rem(130);
+    }
+
     &__header,
     &__cta-section {
         margin: 0 auto;
@@ -37,11 +42,41 @@
         @include breakpoint(tablet) {
             width: 94%;
         }
+
+        @include breakpoint(laptop-s) {
+            width: 86%;
+        }
     }
 
     @include breakpoint(tablet) {
         background-position-x: 32%;
         background-position-y: 50%;
         background-size: 245%;
+    }
+}
+
+.container-2 {
+    @include breakpoint(tablet) {
+        background-image: url("../../images/illustration-editor-desktop.svg"),
+            url("../../images/illustration-laptop-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: 500% 1%, -340% 75%;
+        background-size: 88%;
+        padding-top: to-rem(70);
+    }
+
+    @media (min-width: to-em(860)) {
+        background-size: 86%;
+        background-position: 430% -1%, -290% 75%;
+    }
+
+    @media (min-width: to-em(902)) {
+        background-size: 76%;
+        background-position: 240% 0%, -120% 75%;
+    }
+
+    @media (min-width: to-em(980)) {
+        background-size: 72%;
+        background-position: 200% 0%, -90% 75%;
     }
 }

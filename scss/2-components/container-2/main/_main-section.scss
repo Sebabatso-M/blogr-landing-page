@@ -1,11 +1,6 @@
 .main__section {
     @include set-mb($m-b-xl);
 
-    // span elements within section-card__headings
-    span {
-        display: block;
-    }
-
     /**
     * added specific styling to this image because
     * it looks smaller than the other images even
@@ -22,6 +17,10 @@
         @include breakpoint(mobile-l) {
             max-width: to-rem(620);
         }
+    }
+
+    @include breakpoint(tablet) {
+        position: relative;
     }
 }
 
@@ -50,7 +49,14 @@
     }
 
     @media (min-width: to-em(520)) {
-        margin-right: 10% * 3.5;    // 2
+        margin-right: 10% * 3.5; // 2
+    }
+
+    @include breakpoint(tablet) {
+        margin: 0;
+        left: 0;
+        position: absolute;
+        transform: unset;
     }
 }
 
@@ -67,6 +73,10 @@
         font-weight: 700;
         color: $v-d-blue;
 
+        > span {
+            display: block;
+        }
+
         @include breakpoint(mobile-s) {
             font-size: to-rem(25);
         }
@@ -74,6 +84,22 @@
         @include breakpoint(mobile-m) {
             font-size: to-rem(27);
         }
+
+        @include breakpoint(tablet) {
+            font-size: to-rem(23);
+
+            > span {
+                display: inline;
+            }
+        }
+    }
+
+    @include breakpoint(tablet) {
+        &:not(:last-child) {
+            margin: 0;
+        }
+
+        text-align: left;
     }
 }
 
@@ -81,6 +107,12 @@
     color: $v-d-gray-blue;
     max-width: 35ch;
     margin: 0 auto;
+
+    @include breakpoint(tablet) {
+        margin: 0;
+        text-align: left;
+        max-width: 56ch;
+    }
 }
 
 .section-1 {
@@ -93,9 +125,35 @@
     */
     @include set-mb($m-b-xl + 151); // 1
 
-    img {
-        @media (min-width: to-em(520)) {
-            margin-right: 10% * 3.5;
+    @include breakpoint(tablet) {
+        @include --grid;
+
+        gap: to-rem(30) 0;
+        grid-template-columns: 55% 40%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+            "b a"
+            "c a";
+
+        picture {
+            @include breakpoint(tablet) {
+                grid-area: a;
+                position: relative;
+
+                .editor-img {
+                    @include breakpoint(tablet) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .section-card-1 {
+            grid-area: b;
+        }
+
+        .section-card-2 {
+            grid-area: c;
         }
     }
 }
@@ -129,10 +187,17 @@
         width: 114%;
     }
 
+    @include breakpoint(tablet) {
+        margin-bottom: 22%;
+    }
+
+    @include breakpoint(laptop-s) {
+        width: 120%;
+    }
+
     img {
         position: absolute;
     }
-
     /**
     * subtracting a percentage to the width because:
     *  -the parent width is set to more than 100%
@@ -152,6 +217,17 @@
         @include breakpoint(mobile-l) {
             top: to-rem(-180);
             max-width: to-rem(491);
+        }
+
+        @include breakpoint(tablet) {
+            width: 45%;
+            left: 2.8%;
+            top: to-rem(-100);
+        }
+
+        @include breakpoint(laptop-s) {
+            max-width: to-rem(500);
+            left: 5%;
         }
     }
 }
@@ -189,6 +265,25 @@
         border-bottom-left-radius: to-rem(145);
     }
 
+    @include breakpoint(tablet) {
+        @include --flex;
+
+        border-top-right-radius: to-rem(125);
+        border-bottom-left-radius: to-rem(125);
+        flex-direction: row-reverse;
+        padding: to-rem(58) 0;
+        padding-right: 4%;
+    }
+
+    @include breakpoint(laptop-s) {
+        padding-right: 0;
+    }
+
+    @media (min-width: to-em(902)) {
+        padding: to-rem(80) 0;
+        padding-right: 4%;
+    }
+
     .background-img {
         top: to-rem(-180);
         width: 150%;
@@ -202,6 +297,11 @@
             max-width: to-rem(733);
             top: to-rem(-195);
         }
+
+        @include breakpoint(tablet) {
+            left: to-rem(-140);
+            top: to-rem(-350);
+        }
     }
 
     .section-card {
@@ -210,6 +310,44 @@
         }
         .paragraph {
             color: $grayish-blue;
+        }
+
+        @include breakpoint(tablet) {
+            width: 50%;
+        }
+    }
+}
+
+.section-3 {
+    @include breakpoint(tablet) {
+        @include --grid;
+
+        gap: to-rem(30) 5%;
+        grid-template-columns: 40% 55%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+            "a b"
+            "a c";
+
+        picture {
+            @include breakpoint(tablet) {
+                grid-area: a;
+                position: relative;
+
+                .laptop-img {
+                    @include breakpoint(tablet) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .section-card-1 {
+            grid-area: b;
+        }
+
+        .section-card-2 {
+            grid-area: c;
         }
     }
 }

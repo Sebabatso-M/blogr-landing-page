@@ -3,4 +3,33 @@
     border-top-right-radius: to-rem($curve-val);
     padding-top: to-rem($m-b-l);
     padding-bottom: to-rem($m-b-l);
+
+
+    @include breakpoint(tablet){
+        padding-bottom:0;
+    }
+    
+    .inner-container {
+        @include breakpoint(tablet) {
+            @include --flex;
+
+            justify-content: space-between;
+            margin:0 auto;
+            width: 94%;
+        }
+
+        @include breakpoint(laptop-s) {
+            width: 86%;
+        }
+    }
+
+    .footer-nav {
+        @include breakpoint(tablet) {
+            @include --flex;
+
+            justify-content: space-evenly;
+            margin-right: 5%;
+            width: 80%;
+        }
+    }
 }
