@@ -13,4 +13,10 @@
     @include breakpoint(tablet){
         @include set-mb(72);
     }
+
+    @include breakpoint(laptop-m){
+        @include set-mb(100);
+
+        font-size: to-rem(30);
+    }
 }

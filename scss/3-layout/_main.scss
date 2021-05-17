@@ -11,4 +11,12 @@
     @include breakpoint(laptop-s) {
         width: 86%;
     }
+
+    @include breakpoint(laptop-m) {
+        width: 80%;
+    }
+
+    @include breakpoint(laptop-l) {
+        width: 78%;
+    }
 }

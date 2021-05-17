@@ -4,22 +4,29 @@
     padding-top: to-rem($m-b-l);
     padding-bottom: to-rem($m-b-l);
 
-
-    @include breakpoint(tablet){
-        padding-bottom:0;
+    @include breakpoint(tablet) {
+        padding-bottom: 0;
     }
-    
+
     .inner-container {
         @include breakpoint(tablet) {
             @include --flex;
 
             justify-content: space-between;
-            margin:0 auto;
+            margin: 0 auto;
             width: 94%;
         }
 
         @include breakpoint(laptop-s) {
             width: 86%;
+        }
+
+        @include breakpoint(laptop-m) {
+            width: 80%;
+        }
+
+        @include breakpoint(laptop-l) {
+            width: 78%;
         }
     }
 

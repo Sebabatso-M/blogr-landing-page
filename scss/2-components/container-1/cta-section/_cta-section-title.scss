@@ -20,4 +20,8 @@
     @include breakpoint(tablet) {
         font-size: to-rem(34);
     }
+
+    @include breakpoint(laptop-s) {
+        font-size: to-rem(38);
+    }
 }

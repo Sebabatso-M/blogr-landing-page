@@ -195,6 +195,14 @@
         width: 120%;
     }
 
+    @include breakpoint(laptop-m) {
+        width: 128%;
+    }
+
+    @include breakpoint(laptop-l) {
+        width: 132%;
+    }
+
     img {
         position: absolute;
     }
@@ -228,6 +236,14 @@
         @include breakpoint(laptop-s) {
             max-width: to-rem(500);
             left: 5%;
+        }
+
+        @include breakpoint(laptop-m) {
+            left: 6%;
+        }
+
+        @include breakpoint(laptop-l) {
+            left: 8%;
         }
     }
 }
@@ -307,6 +323,10 @@
     .section-card {
         &__heading {
             color: $white;
+
+            @include breakpoint(laptop-m) {
+                font-size: to-rem(30);
+            }
         }
         .paragraph {
             color: $grayish-blue;
@@ -322,8 +342,8 @@
     @include breakpoint(tablet) {
         @include --grid;
 
-        gap: to-rem(30) 5%;
-        grid-template-columns: 40% 55%;
+        gap: to-rem(30) 7%;
+        grid-template-columns: 40% 53%;
         grid-template-rows: 50% 50%;
         grid-template-areas:
             "a b"
