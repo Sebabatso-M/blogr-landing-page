@@ -5,6 +5,11 @@ const html = document.querySelector("html");
 const header = document.querySelector(".header");
 const nav_dropdowns = document.querySelectorAll(".navigation__dropdown");
 
+window.onresize = () => {
+    header.classList.remove("--is-open");
+    menu.classList.remove("animated");
+};
+
 // open/close menu
 menu_btn.addEventListener(
     "click",
